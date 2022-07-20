@@ -27,7 +27,7 @@ public class Day13wkshpApplication implements ApplicationRunner {
 			dbSvc.setDataDir(new File(dataDir));
 
 			if (!dbSvc.isDataDirValid()) {
-				System.err.printf("%s does not exist, is not a directory or not writable.");
+				System.err.printf("%s does not exist, is not a directory or not writable.", dataDir);
 				System.exit(-1);
 			}
 			

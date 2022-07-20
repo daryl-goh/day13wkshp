@@ -1,8 +1,7 @@
 package sg.edu.nus.iss.day13wkshp.services;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.IOException;
 import java.util.*;
 
 import org.springframework.stereotype.Service;
@@ -51,7 +50,7 @@ public class DatabaseService {
         try {
 
             File f = new File(this.dataDir, fileId);
-            Scanner myReader = new Scanner(System.in);
+            Scanner myReader = new Scanner(f);
             while (myReader.hasNextLine()) {
                 System.out.println(myReader.nextLine());
             }
